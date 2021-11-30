@@ -1,15 +1,10 @@
 import dotenv from "dotenv";
 import { Client, Intents } from "discord.js";
+import words from "./data.js";
 
 const prefix = "$";
 const defaultValues = {
-  wordList: [
-    "chaavu chetha payale",
-    "nakku",
-    "ada bethila povaan",
-    "kirukku mental payaluvala",
-    "romba santhosam nanbargale",
-  ],
+  wordList: words,
   timeInterval: "10",
   maxTime: "5",
 };
@@ -96,7 +91,6 @@ client.on("messageCreate", (message) => {
           ? args[3].split(",")
           : defaultValues.wordList;
       console.log(idForPing + " " + maxTime + " " + interval);
-      console.log(wordList);
 
       message.channel.send(
         `<@${message.author.id}> Bot will stop them pinging after ${maxTime}\n\`if you wish to interrupt use $stop\``
