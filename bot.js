@@ -61,7 +61,7 @@ client.on("messageCreate", (message) => {
         );
         return;
       }
-      const sampleArgs = `\`$roast @user maxtime[minimum 5m] interval[minimum 10s] worldlist[optional]\``;
+      const sampleArgs = `\`$roast @user maxtime[unit-minutes, minimum 5m] interval[unit-seconds minimum 10s] worldlist[optional]\``;
 
       // checking number of arguments
       if (args.length === 0 || args.length < 2) {
