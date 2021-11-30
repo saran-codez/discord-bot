@@ -93,7 +93,7 @@ client.on("messageCreate", (message) => {
       console.log(idForPing + " " + maxTime + " " + interval);
 
       message.channel.send(
-        `<@${message.author.id}> Bot will stop them pinging after ${maxTime}\n\`if you wish to interrupt use $stop\``
+        `<@${message.author.id}> Bot will stop them pinging after ${maxTime}m\n\`if you wish to interrupt use $stop\``
       );
       sendRandomMsg(message, idForPing, maxTime, interval, wordList);
     }
