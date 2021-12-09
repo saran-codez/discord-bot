@@ -26,12 +26,12 @@ client.on("messageCreate", (message) => {
   if (message.author.bot) return;
 
   //   finding user who pinged @everyone
-  if (message.content === `@everyone`) {
+  if (message.content.includes(`@everyone`)) {
     message.reply(`<@${message.author.id}> pinged everyone`);
   }
 
   //   finding user who pinged @here
-  if (message.content === `@here`) {
+  if (message.content.includes(`@here`)) {
     message.reply(`<@${message.author.id}> pinged here`);
   }
 
